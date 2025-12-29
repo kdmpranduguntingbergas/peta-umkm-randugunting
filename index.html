@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta UMKM Randugunting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash" onclick="goToHome()">
+  <img src="logo-umkm.png" alt="Logo UMKM">
+  <p>Klik untuk masuk</p>
+</div>
+
+<!-- HOME PAGE -->
+<div id="home" class="page hidden">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>CHOOSE ONE<br>OF THE MAP</h1>
+
+    <div class="map-wrapper">
+      <img src="peta-desa-main.png" class="map-img">
+
+      <!-- PIN -->
+      <div class="pin kebonan" style="top:50%; left:45%;" onclick="openDusun('kebonan')">
+        <div class="pin-icon"></div>
+        <span class="label">Kebonan</span>
+      </div>
+
+      <div class="pin kutan" style="top:70%; left:50%;" onclick="openDusun('kutan')">
+        <div class="pin-icon"></div>
+        <span class="label">Kutan</span>
+      </div>
+
+      <div class="pin krajan" style="top:80%; left:63%;" onclick="openDusun('krajan')">
+        <div class="pin-icon"></div>
+        <span class="label">Krajan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="summary">
+    <div class="box food">
+      <b>Food</b>
+      <span>10</span>
+    </div>
+    <div class="box other">
+      <b>Others</b>
+      <span>10</span>
+    </div>
+  </section>
+
+  <!-- NERACA -->
+  <section class="dusun-wrapper">
+    <img src="neraca-umkm.png" class="neraca-bg">
+
+    <div class="dusun-text krajan">
+      <h3>Krajan</h3>
+      <p>7 UMKM</p>
+    </div>
+
+    <div class="dusun-text kutan">
+      <h3>Kutan</h3>
+      <p>5 UMKM</p>
+    </div>
+
+    <div class="dusun-text kebonan">
+      <h3>Kebonan</h3>
+      <p>8 UMKM</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <button onclick="goProfile()"><img src="profil btn.png"></button>
+    <button onclick="showHome()"><img src="homebtn.png"></button>
+    <button><img src="sosmedbtn.png"></button>
+  </footer>
+
+</div>
+<!-- PROFILE PAGE -->
+<div id="profile" class="page hidden">
+
+  <section class="profile-header">
+    <!-- TOMBOL KEMBALI -->
+    <button class="back-btn" onclick="goHome()">
+      <img src="backbtn.png" alt="Kembali">
+    </button>
+
+    <h1>PROFIL UMKM</h1>
+  </section>
+
+  <!-- ISI PROFIL -->
+  <section class="profile-content">
+
+    <section class="dusun-list">
+
+      <!-- DUSUN KRAJAN -->
+      <div class="dusun-card">
+        <img src="foto-krajan.jpg" alt="Dusun Krajan">
+
+        <div class="dusun-info">
+          <div>
+            <h3>Dusun Krajan</h3>
+            <p>7 UMKM</p>
+          </div>
+
+          <button class="more-btn" onclick="openDusunPage('krajan')">
+            <img src="morebtn.png" alt="More">
+          </button>
+        </div>
+      </div>
+
+      <!-- DUSUN KUTAN -->
+      <div class="dusun-card">
+        <img src="foto-kutan.jpg" alt="Dusun Kutan">
+
+        <div class="dusun-info">
+          <div>
+            <h3>Dusun Kutan</h3>
+            <p>5 UMKM</p>
+          </div>
+
+          <button class="more-btn" onclick="openDusunPage('kutan')">
+            <img src="morebtn.png" alt="More">
+          </button>
+        </div>
+      </div>
+
+      <!-- DUSUN KEBONAN -->
+      <div class="dusun-card">
+        <img src="foto-kebonan.JPG" alt="Dusun Kebonan">
+
+        <div class="dusun-info">
+          <div>
+            <h3>Dusun Kebonan</h3>
+            <p>8 UMKM</p>
+          </div>
+
+          <button class="more-btn" onclick="openDusunPage('kebonan')">
+            <img src="morebtn.png" alt="More">
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </section>
+
+</div>
+
+<!-- Halaman Umkm Krajan -->
+<div id="dusun-krajan" class="page hidden">
+
+  <section class="profile-header">
+    <button class="back-btn" onclick="showPage('profile')">
+      <img src="backbtn.png">
+    </button>
+    <h1>DUSUN KRAJAN</h1>
+  </section>
+
+  <section class="umkm-list">
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Krajan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Krajan No.15 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Krajan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Krajan No.15 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Krajan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+
+  </section>
+</div>
+
+<!-- Halaman Umkm Kutan -->
+<div id="dusun-kutan" class="page hidden">
+
+  <section class="profile-header">
+    <button class="back-btn" onclick="showPage('profile')">
+      <img src="backbtn.png">
+    </button>
+    <h1>DUSUN KUTAN</h1>
+  </section>
+
+  <section class="umkm-list">
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kutan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kutan No.15 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kutan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kutan No.15 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kutan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- Halaman Umkm Kebonan -->
+<div id="dusun-kebonan" class="page hidden">
+
+  <section class="profile-header">
+    <button class="back-btn" onclick="showPage('profile')">
+      <img src="backbtn.png">
+    </button>
+    <h1>DUSUN KEBONAN</h1>
+  </section>
+
+  <section class="umkm-list">
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kebonan No.12 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kebonan No.15 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kebonan No.17 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kebonan No.19 RT/RW 01/02</p>
+      </div>
+    </div>
+
+    <div class="umkm-card" onclick="alert('detail UMKM')">
+      <div class="umkm-img"></div>
+      <div class="umkm-text">
+        <span class="category">Food Product</span>
+        <h3>Nama Merek Usaha</h3>
+        <p>Jl. Kebonan No.20 RT/RW 01/02</p>
+      </div>
+    </div>
+    
+  </section>
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

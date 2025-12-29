@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3e7d3;
+  overflow: hidden; /* TIDAK SCROLL */
+}
+
+/* ================= SPLASH ================= */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: #F1E54B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity .6s;
+  z-index: 1000;
+}
+
+#splash img {
+  width: 240px;
+}
+
+#splash.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ================= PAGE SYSTEM ================= */
+.hidden {
+  display: none;
+}
+
+.page {
+  position: fixed;
+  inset: 0;
+  background: #f3e7d3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease;
+}
+
+.page.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= HERO / MAP ================= */
+.hero {
+  height: 40vh;
+  background: #c8d85a;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 20px;
+  position: relative;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: 2px;
+  color: #4a2f1a;
+}
+
+/* MAP */
+.map-wrapper {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-img {
+  height: 95%;
+  max-width: 95%;
+  object-fit: contain;
+}
+
+/* ================= PIN ================= */
+.pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
+
+.pin-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  margin: auto;
+  position: relative;
+}
+
+.pin-icon::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.pin.krajan .pin-icon {
+  background: #ec5f8d;
+}
+
+.pin.kutan .pin-icon {
+  background: #ffd24d;
+}
+
+.pin.kebonan .pin-icon {
+  background: #5fa8ec;
+}
+
+.pin {
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10; /* biar di atas peta */
+}
+
+.pin:active {
+  transform: translate(-50%, -95%) scale(0.95);
+}
+
+.pin.active .label {
+  background: #4a2f1a;
+  color: white;
+}
+
+.pin.active .pin-icon {
+  filter: brightness(0.85);
+}
+ 
+
+.label {
+  margin-top: 6px;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ================= SUMMARY ================= */
+.summary {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  margin-top: 55px;
+}
+
+.box {
+  flex: 1;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.food {
+  background: #f0d7a8;
+}
+
+.other {
+  background: #d6e2d6;
+}
+
+.box span {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ================= NERACA ================= */
+.dusun-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.neraca-bg {
+  width: 100%;
+  display: block;
+}
+
+/* TEXT DI NERACA */
+.dusun-text {
+  position: absolute;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+  color: #4a2f1a;
+}
+
+.dusun-text.krajan {
+  left: 17%;
+}
+
+.dusun-text.kutan {
+  left: 50%;
+}
+
+.dusun-text.kebonan {
+  left: 83%;
+}
+
+/* ================= FOOTER (DIEM) ================= */
+footer {
+  position: fixed;
+  bottom: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 80px;
+  z-index: 999;
+}
+
+footer button {
+  background: none;
+  border: none;
+}
+
+footer img {
+  width: 70px;
+  display: block;
+}
+
+
+/* ================= PROFILE PAGE ================= */
+.profile-header {
+  background: #c8d85a;
+  padding: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #4a2f1a;
+}
+
+/* BACK BUTTON PROFIL */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.back-btn img {
+  width: 45px;
+  height: auto;
+}
+
+/* EFEK UMUM BUTTON */
+button {
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* SAAT DIKLIK */
+button:active {
+  transform: translateY(3px) scale(0.97);
+}
+
+/* ================= LIST DUSUN ================= */
+.dusun-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  /* 🔽 TAMBAHAN SCROLL (INI AJA YANG BARU) */
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* KARTU DUSUN */
+.dusun-card {
+  background: #eaff9d;
+  border-radius: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* FOTO */
+.dusun-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+/* INFO BAWAH FOTO */
+.dusun-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+}
+
+.dusun-info h3 {
+  font-size: 18px;
+  color: #4a2f1a;
+}
+
+.dusun-info p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a2f1a;
+}
+
+/* MORE BUTTON */
+.more-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.more-btn img {
+  width: 45px;
+  height: auto;
+}
+
+/* EFEK KLIK */
+.more-btn:active {
+  transform: scale(0.92);
+}
+
+.umkm-card {
+  display: flex;
+  gap: 20px;            /* jarak foto & teks */
+  align-items: center;
+  margin-bottom: 25px; /* ⬅️ INI YANG BIKIN RENGGANG */
+}
+
+.umkm-img {
+  width: 90px;
+  height: 90px;
+  background: #ddd;
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+.umkm-text .category {
+  font-size: 13px;
+  opacity: .8;
+}
+
+.umkm-text h3 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.umkm-text p {
+  font-size: 14px;
+}
