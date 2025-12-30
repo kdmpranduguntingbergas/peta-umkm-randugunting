@@ -63,3 +63,26 @@ function openUmkm(number) {
   // contoh: number = 1 → umkm-1
   showPage('umkm-' + number);
 }
+
+/* ================= BACK TO FIRST SCREEN ================= */
+function goFirstScreen() {
+  // sembunyikan semua page
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('show');
+    page.classList.add('hidden');
+  });
+
+  // tampilkan splash lagi
+  const splash = document.getElementById('splash');
+  splash.style.display = 'flex';
+
+  // reset animasi
+  splash.classList.remove('fade-out');
+}
+
+function openInstagram() {
+  window.open(
+    'https://www.instagram.com/umkmrandugunting',
+    '_blank'
+  );
+}

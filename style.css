@@ -241,6 +241,11 @@ footer img {
   display: block;
 }
 
+footer {
+  pointer-events: auto;
+}
+
+
 
 /* ================= PROFILE PAGE ================= */
 .profile-header {
@@ -458,6 +463,3 @@ button:active {
   color: #4a2f1a;
   text-decoration: none;
 }
-
-
-
