@@ -223,7 +223,7 @@ body {
 /* ================= FOOTER (DIEM) ================= */
 footer {
   position: fixed;
-  bottom: 52%;
+  bottom: 48%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -378,3 +378,4 @@ button:active {
 .umkm-text p {
   font-size: 14px;
 }
+
