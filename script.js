@@ -40,34 +40,26 @@ function goHome() {
 }
 
 /* ================= DEFAULT ================= */
-// pastikan home & profile dalam state awal
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('home')?.classList.add('hidden');
   document.getElementById('profile')?.classList.add('hidden');
 });
 
-function openDusunPage(dusun) {
-  alert('Masuk ke halaman UMKM Dusun ' + dusun.toUpperCase());
-
-  // nanti bisa diganti:
-  // showPage('umkm-' + dusun);
-}
-
-/* ================= UMKM DUSUN ================= */
+/* ================= DUSUN ================= */
 /* MASUK KE HALAMAN DUSUN */
 function openDusunPage(dusun) {
-  // contoh: dusun = 'krajan'
+  // dusun: krajan | kutan | kebonan
   showPage('dusun-' + dusun);
 }
 
-/* KEMBALI KE PROFILE DARI HALAMAN DUSUN */
+/* KEMBALI KE PROFILE */
 function backToProfile() {
   showPage('profile');
 }
 
-/* (OPSIONAL) DETAIL UMKM */
-function openDetailUMKM(nama) {
-  alert('Buka detail UMKM: ' + nama);
-  // nanti bisa:
-  // showPage('detail-umkm');
+/* ================= UMKM DETAIL ================= */
+/* MASUK KE DETAIL UMKM (1–15) */
+function openUmkm(number) {
+  // contoh: number = 1 → umkm-1
+  showPage('umkm-' + number);
 }
