@@ -82,7 +82,8 @@ function goFirstScreen() {
 
 function openInstagram() {
   window.open(
-    'https://www.instagram.com/umkmrandugunting',
+    'https://www.instagram.com/pemdes.randugunting.bergas?igsh=MjkxbHN5cDk3NWUw&utm_source=qr',
     '_blank'
   );
 }
+
