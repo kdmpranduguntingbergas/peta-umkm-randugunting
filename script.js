@@ -80,10 +80,13 @@ function goFirstScreen() {
   splash.classList.remove('fade-out');
 }
 
+/* ================= SOSMED ================= */
 function openInstagram() {
   window.open(
     'https://www.instagram.com/pemdes.randugunting.bergas?igsh=MjkxbHN5cDk3NWUw&utm_source=qr',
+    '_blank'
   );
 }
+
 
 
